@@ -23,6 +23,12 @@ using namespace std;
  
  */
 
+//  funkcja, która nie przyjmuje argumentów i nie zwraca wartości
+void symbol ()
+{
+    // kod funkcji
+}
+
 //  funkcja dodawanie
 int dodawanie(int a, int b)
 {
@@ -59,11 +65,13 @@ int main(int argc, const char * argv[])
     suma = dodawanie(a,b);
     cout << suma;
     
-    //mnozenie
-    
+    //  mnozenie
     int c,d;
     cin >> c >> d;
     cout << endl << mnozenie(c,d);
+    
+    //  wywołanie funkcji void
+    symbol();
     
     return 0;
 }
