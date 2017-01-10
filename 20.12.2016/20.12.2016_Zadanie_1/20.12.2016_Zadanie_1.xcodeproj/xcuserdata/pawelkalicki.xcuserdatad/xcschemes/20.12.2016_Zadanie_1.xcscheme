@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "CDBC179B1E24CC7700C81CE9"
-               BuildableName = "20.12.2016"
-               BlueprintName = "20.12.2016"
-               ReferencedContainer = "container:20.12.2016.xcodeproj">
+               BlueprintIdentifier = "CDBC17AE1E24EFAD00C81CE9"
+               BuildableName = "20.12.2016_Zadanie_1"
+               BlueprintName = "20.12.2016_Zadanie_1"
+               ReferencedContainer = "container:20.12.2016_Zadanie_1.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -32,10 +32,10 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "CDBC179B1E24CC7700C81CE9"
-            BuildableName = "20.12.2016"
-            BlueprintName = "20.12.2016"
-            ReferencedContainer = "container:20.12.2016.xcodeproj">
+            BlueprintIdentifier = "CDBC17AE1E24EFAD00C81CE9"
+            BuildableName = "20.12.2016_Zadanie_1"
+            BlueprintName = "20.12.2016_Zadanie_1"
+            ReferencedContainer = "container:20.12.2016_Zadanie_1.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -55,10 +55,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "CDBC179B1E24CC7700C81CE9"
-            BuildableName = "20.12.2016"
-            BlueprintName = "20.12.2016"
-            ReferencedContainer = "container:20.12.2016.xcodeproj">
+            BlueprintIdentifier = "CDBC17AE1E24EFAD00C81CE9"
+            BuildableName = "20.12.2016_Zadanie_1"
+            BlueprintName = "20.12.2016_Zadanie_1"
+            ReferencedContainer = "container:20.12.2016_Zadanie_1.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -74,10 +74,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "CDBC179B1E24CC7700C81CE9"
-            BuildableName = "20.12.2016"
-            BlueprintName = "20.12.2016"
-            ReferencedContainer = "container:20.12.2016.xcodeproj">
+            BlueprintIdentifier = "CDBC17AE1E24EFAD00C81CE9"
+            BuildableName = "20.12.2016_Zadanie_1"
+            BlueprintName = "20.12.2016_Zadanie_1"
+            ReferencedContainer = "container:20.12.2016_Zadanie_1.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
