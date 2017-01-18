@@ -1,7 +1,5 @@
  Zadania:
 
-
-
 1. Wyszukać największą i najmniejszą wartość z losowo wypełnionej tablicy.
 
 2. Dynamiczna alokacja pamięci
