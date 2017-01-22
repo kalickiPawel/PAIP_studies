@@ -5,6 +5,10 @@
 //  Created by Paweł Kalicki on 10/01/2017.
 //  Copyright © 2017 Paweł Kalicki. All rights reserved.
 //
+//  Zadanie 1
+//
+//  Wyszukać największą i najmniejszą wartość z losowo wypełnionej tablicy.
+//
 
 #include <iostream>
 #include <cstdlib>
@@ -13,7 +17,6 @@
 using namespace std; //definiowanie przestrzeni nazw aby nie pisać std::polecenie
 
 int main(int argc, const char * argv[]) {
-    // Zadanie 1.
     
     //  generator liczby losowej na bazie czasu
     //  (w innym środowisku time(NULL))

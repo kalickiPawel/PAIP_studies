@@ -1,8 +1,8 @@
  Zadania:
 
-1. Wyszukać największą i najmniejszą wartość z losowo wypełnionej tablicy.
+1. 
 
-2. Dynamiczna alokacja pamięci
+2. 
 
 3. Tablice znakowe -> czytanie i wyświetlenie danych. 
 Przykład: char dane[100];
