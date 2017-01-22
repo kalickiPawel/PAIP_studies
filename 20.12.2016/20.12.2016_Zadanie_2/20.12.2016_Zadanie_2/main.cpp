@@ -7,7 +7,7 @@
 //
 //  Zadanie 2
 //
-//  Dynamiczna alokacja pamięci tablicy dwuwymiarowej
+//  Dynamiczna alokacja pamięci tablicy jednowymiarowe i dwuwymiarowej
 //
 
 #include <iostream>
