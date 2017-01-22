@@ -15,33 +15,57 @@
 using namespace std;
 
 int main(int argc, const char * argv[]) {
-    int rozmiar = 0;
-    int wartosc = 0;
+    int x;
+    char powrot;
     
-    cout << "Podaj rozmiar tablicy: ";
-    cin >> rozmiar;
+    cout << "Tablica jednowymiarowa wybierz: 0" << endl;
+    cout << "Tablica dwuwymiarowa wybierz: 1" << endl;
+    cin >> x;
     
-    int *p = new int[rozmiar]; //   alokuję pamięć na tablicę w sposób dynamiczny
+    do{
+        switch(x)
+        {
+            
+        case 0:
+            
+            int rozmiar = 0;
+            int wartosc = 0;
     
-    cout << "Stworzono tablice o " << rozmiar << " elementach" << endl;
+            cout << "Podaj rozmiar tablicy: ";
+            cin >> rozmiar;
     
-    for(int i=0; i<rozmiar; i++)
-    {
-        cout << "Podaj wartosc " << i << " elementu: ";
-        cin >> wartosc;
-        p[i] = wartosc;
-    }
+            int *p = new int[rozmiar]; //   alokuję pamięć na tablicę w sposób dynamiczny
     
-    cout << "Elementy w tablicy to:" << endl;
+            cout << "Stworzono tablice o " << rozmiar << " elementach" << endl;
     
-    for(int i=0; i<rozmiar; i++)
-    {
-        cout << p[i] << " ";
-    }
+            for(int i=0; i<rozmiar; i++)
+            {
+                cout << "Podaj wartosc " << i << " elementu: ";
+                cin >> wartosc;
+                p[i] = wartosc;
+            }
     
-    cout << endl;
+            cout << "Elementy w tablicy to:" << endl;
     
-    delete[] p; //  usuwanie pamięci tablicy
+            for(int i=0; i<rozmiar; i++)
+            {
+                cout << p[i] << " ";
+            }
     
+            cout << endl;
+    
+            delete[] p; //  usuwanie pamięci tablicy
+            
+            break;
+            
+        case 1:
+                cout << "Sektor 1" << endl;;
+                break;
+        default:
+            cout << "Nie wybrałeś tablicy wpisz \"x\" aby powrocic" << endl;
+            cin >> powrot;
+            break;
+        }
+    }while(powrot!=x);
     return 0;
 }
