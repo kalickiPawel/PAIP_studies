@@ -22,44 +22,89 @@ int main(int argc, const char * argv[]) {
     cout << "Tablica dwuwymiarowa wybierz: 1" << endl;
     cin >> zmienna;
     
-        if(zmienna == 0)
+    if(zmienna == 0)
+    {
+        int rozmiar = 0;
+        int wartosc = 0;
+
+        cout << "Podaj rozmiar tablicy: ";
+        cin >> rozmiar;
+
+        int *p = new int[rozmiar]; //   alokuję pamięć na tablicę w sposób dynamiczny
+    
+        cout << "Stworzono tablice o " << rozmiar << " elementach" << endl;
+    
+        for(int i=0; i<rozmiar; i++)
         {
-            int rozmiar = 0;
-            int wartosc = 0;
+            cout << "Podaj wartosc " << i << " elementu: ";
+            cin >> wartosc;
+            p[i] = wartosc;
+        }
+    
+        cout << "Elementy w tablicy to:" << endl;
 
-            cout << "Podaj rozmiar tablicy: ";
-            cin >> rozmiar;
-
-            int *p = new int[rozmiar]; //   alokuję pamięć na tablicę w sposób dynamiczny
+        for(int i=0; i<rozmiar; i++)
+        {
+            cout << p[i] << " ";
+        }
     
-            cout << "Stworzono tablice o " << rozmiar << " elementach" << endl;
+        cout << endl;
     
-            for(int i=0; i<rozmiar; i++)
-            {
-                cout << "Podaj wartosc " << i << " elementu: ";
-                cin >> wartosc;
-                p[i] = wartosc;
-            }
-    
-            cout << "Elementy w tablicy to:" << endl;
-    
-            for(int i=0; i<rozmiar; i++)
-            {
-                cout << p[i] << " ";
-            }
-    
-            cout << endl;
-    
-            delete[] p; //  usuwanie pamięci tablicy
+        //  usuwanie pamięci tablicy
+        
+        delete[] p;
+        p = NULL;
+        
+        return 0;
+    }
+        
+    else if (zmienna == 1)
+    {
+        int wiersz = 0;
+        int kolumna = 0;
+        int wartosc = 0;
+        
+        cout << "Podaj ilosc wierszy: ";
+        cin >> wiersz;
+        
+        cout << "Podaj ilosc kolumn: ";
+        cin >> kolumna;
+        
+        int **p2 = new int *[wiersz]; //alokacja pamieci
+        for ( int i = 0; i < wiersz; i++ )
+        {
+            p2[i] = new int [kolumna]; //alokacja pamieci
             
-            return 0;
+            //wpisanie wartosci do tablicy
+            
+            for ( int j = 0; j < kolumna; j++)
+            {
+                cout << "Wprowadz wartosc [" << i << "][" << j << "] adresu tablicy" << endl;
+                cin >> wartosc;
+                p2[i][j]=wartosc;
+            }
         }
         
-        else if (zmienna == 1)
-        {
-            cout << "Sektor 1" << endl;
-            return 0;
-        }
+        //wypisz tablicy
+        
+        for ( int i = 0; i < wiersz; i++, cout<<endl )
+            for ( int j = 0; j < kolumna; j++)
+                cout<<p2[i][j]<<'\t';
+        
+        //zwalnianie pamieci
+        
+        for ( int i(0); i < wiersz; ++i )
+            delete [] p2[i]; //uwolnienie pamieci
+        
+        delete [] p2; //uwolnienie pamieci
+        
+        p2 = NULL;
+        
+        return 0;
+    }
+    
+    else
+        cout << "Zle wybrales! ^^" << endl;
     
     return 0;
 }
