@@ -21,7 +21,7 @@ int main(int argc, const char * argv[]) {
     cout << "Podaj rozmiar tablicy: ";
     cin >> rozmiar;
     
-    int *p = new int[rozmiar]; //   tworzę rozmiar tablicy w sposób dynamiczny
+    int *p = new int[rozmiar]; //   alokuję pamięć na tablicę w sposób dynamiczny
     
     cout << "Stworzono tablice o " << rozmiar << " elementach" << endl;
     
