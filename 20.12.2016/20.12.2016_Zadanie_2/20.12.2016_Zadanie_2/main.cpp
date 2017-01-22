@@ -22,7 +22,7 @@ int main(int argc, const char * argv[]) {
     cout << "Tablica dwuwymiarowa wybierz: 1" << endl;
     cin >> zmienna;
     
-    if(zmienna == 0)
+    if(zmienna == 0) // tablica jednowymiarowa
     {
         int rozmiar = 0;
         int wartosc = 0;
@@ -30,7 +30,7 @@ int main(int argc, const char * argv[]) {
         cout << "Podaj rozmiar tablicy: ";
         cin >> rozmiar;
 
-        int *p = new int[rozmiar]; //   alokuję pamięć na tablicę w sposób dynamiczny
+        int *p = new int[rozmiar]; // alokuję pamięć na tablicę w sposób dynamiczny
     
         cout << "Stworzono tablice o " << rozmiar << " elementach" << endl;
     
@@ -45,20 +45,20 @@ int main(int argc, const char * argv[]) {
 
         for(int i=0; i<rozmiar; i++)
         {
-            cout << p[i] << " ";
+            cout << p[i] << '\t';
         }
     
         cout << endl;
     
-        //  usuwanie pamięci tablicy
+        // usuwanie pamięci tablicy
         
-        delete[] p;
-        p = NULL;
+        delete[] p; // uwolnienie pamieci adresu
+        p = NULL;   // uwolnienie pamieci zmiennej
         
         return 0;
     }
         
-    else if (zmienna == 1)
+    else if (zmienna == 1) // tablica dwuwymiarowa
     {
         int wiersz = 0;
         int kolumna = 0;
@@ -70,7 +70,8 @@ int main(int argc, const char * argv[]) {
         cout << "Podaj ilosc kolumn: ";
         cin >> kolumna;
         
-        int **p2 = new int *[wiersz]; //alokacja pamieci
+        int **p2 = new int *[wiersz]; // alokacja pamieci
+        
         for ( int i = 0; i < wiersz; i++ )
         {
             p2[i] = new int [kolumna]; //alokacja pamieci
@@ -85,20 +86,20 @@ int main(int argc, const char * argv[]) {
             }
         }
         
-        //wypisz tablicy
+        // wypisanie tablicy
         
         for ( int i = 0; i < wiersz; i++, cout<<endl )
             for ( int j = 0; j < kolumna; j++)
                 cout<<p2[i][j]<<'\t';
         
-        //zwalnianie pamieci
+        // zwalnianie pamieci
         
         for ( int i(0); i < wiersz; ++i )
-            delete [] p2[i]; //uwolnienie pamieci
+            delete [] p2[i]; // uwolnienie pamieci kolumn
         
-        delete [] p2; //uwolnienie pamieci
+        delete [] p2; //uwolnienie pamieci wierszy
         
-        p2 = NULL;
+        p2 = NULL; // uwolnienie pamieci zmiennej
         
         return 0;
     }
