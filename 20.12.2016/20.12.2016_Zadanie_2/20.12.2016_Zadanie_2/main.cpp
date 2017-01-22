@@ -22,54 +22,44 @@ int main(int argc, const char * argv[]) {
     cout << "Tablica dwuwymiarowa wybierz: 1" << endl;
     cin >> zmienna;
     
-    do
-    {
-        switch(zmienna)
+        if(zmienna == 0)
         {
-            case 0:
+            int rozmiar = 0;
+            int wartosc = 0;
+
+            cout << "Podaj rozmiar tablicy: ";
+            cin >> rozmiar;
+
+            int *p = new int[rozmiar]; //   alokuję pamięć na tablicę w sposób dynamiczny
+    
+            cout << "Stworzono tablice o " << rozmiar << " elementach" << endl;
+    
+            for(int i=0; i<rozmiar; i++)
+            {
+                cout << "Podaj wartosc " << i << " elementu: ";
+                cin >> wartosc;
+                p[i] = wartosc;
+            }
+    
+            cout << "Elementy w tablicy to:" << endl;
+    
+            for(int i=0; i<rozmiar; i++)
+            {
+                cout << p[i] << " ";
+            }
+    
+            cout << endl;
+    
+            delete[] p; //  usuwanie pamięci tablicy
             
-                int rozmiar = 0;
-                int wartosc = 0;
-    
-                cout << "Podaj rozmiar tablicy: ";
-                cin >> rozmiar;
-    
-                int *p = new int[rozmiar]; //   alokuję pamięć na tablicę w sposób dynamiczny
-    
-                cout << "Stworzono tablice o " << rozmiar << " elementach" << endl;
-    
-                for(int i=0; i<rozmiar; i++)
-                {
-                    cout << "Podaj wartosc " << i << " elementu: ";
-                    cin >> wartosc;
-                    p[i] = wartosc;
-                }
-    
-                cout << "Elementy w tablicy to:" << endl;
-    
-                for(int i=0; i<rozmiar; i++)
-                {
-                    cout << p[i] << " ";
-                }
-    
-                cout << endl;
-    
-                delete[] p; //  usuwanie pamięci tablicy
-            
-                break;
-                
-            case 1:
-                
-                cout << "Sektor 1" << endl;
-                
-                break;
-                
-            default:
-                
-                cout << "Nie wybrałeś tablicy!" << endl;
-                break;
+            return 0;
         }
-    }while(zmienna != 1 || zmienna != 0);
+        
+        else if (zmienna == 1)
+        {
+            cout << "Sektor 1" << endl;
+            return 0;
+        }
     
     return 0;
 }
